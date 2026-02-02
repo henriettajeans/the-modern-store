@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
         hostname: 'i.imgur.com',
       },
     ],
@@ -23,4 +27,4 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-// picsum.photos
+// placehold.co

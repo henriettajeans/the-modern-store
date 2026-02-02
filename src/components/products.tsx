@@ -8,7 +8,7 @@ export default async function DisplayAllProducts({ products }: { products: IProd
             <h2>Alla våra produkter</h2>
             <ul>
                 {products.map((item) =>
-                    <Link href="" key={item.id}>
+                    <Link href={`/product/${item.slug}`} key={item.id}>
                         <li>
                             <h5>{item.title}</h5>
                             <Image src={item.images[0]} alt={item.description} height={200} width={200} />

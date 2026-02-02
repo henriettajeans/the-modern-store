@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { IProduct } from "./models/IProducts";
-import getAllProducts from "./services/getAllProducts";
-import DisplayAllProducts from "./components/products";
+import { IProduct } from "../models/IProducts";
+import getAllProducts from "../services/getAllProducts";
+import DisplayAllProducts from "../components/products";
 
 export default async function Home() {
   const products: IProduct[] = await getAllProducts();
 
-  if (!products) {
+  if (products.length === 0) {
     console.log("Inga produkter laddas");
   }
 
