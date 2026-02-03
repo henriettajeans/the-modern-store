@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'i.imgur.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'pravatar.cc',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.escuelajs.co',
+      },
     ],
   },
   reactCompiler: true,
@@ -27,4 +35,4 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-// placehold.co
+// api.escuelajs.co

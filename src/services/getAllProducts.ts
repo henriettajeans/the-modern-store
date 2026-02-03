@@ -9,6 +9,6 @@ export default async function getAllProducts(): Promise<IProduct[]> {
         throw new Error("Gick inte att ladda produkter")
     }
     const data: IProduct[] = await res.json();
-    console.log(data);
+    // console.log(data);
     return data;
 }

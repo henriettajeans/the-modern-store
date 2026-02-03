@@ -11,7 +11,7 @@ export default async function DisplayAllProducts({ products }: { products: IProd
                     <Link href={`/product/${item.slug}`} key={item.id}>
                         <li>
                             <h5>{item.title}</h5>
-                            <Image src={item.images[0]} alt={item.description} height={200} width={200} />
+                            <img src={item.images[0]} alt={item.description} height={200} width={200} />
                         </li>
                     </Link>)}
             </ul>
