@@ -16,13 +16,15 @@ export default function NavBar() {
         }
     ]
     return (
-        <ul>
-            {menu.map((m, index) =>
-                <li key={index}>
-                    <Link href={m.url}>
-                        {m.name}
-                    </Link>
-                </li>)}
-        </ul>
+        <nav>
+            <ul>
+                {menu.map((m, index) =>
+                    <li key={index}>
+                        <Link href={m.url}>
+                            {m.name}
+                        </Link>
+                    </li>)}
+            </ul>
+        </nav>
     )
 }

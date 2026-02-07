@@ -1,0 +1,23 @@
+nav {
+    background: rgba(128, 0, 128, 0.248);
+    width: 100vw;
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem;
+
+        li {
+            text-decoration: none;
+        }
+
+        li:hover {
+            text-decoration: underline;
+            color: rgb(136, 123, 136);
+        }
+
+        li:first-child {
+            margin-right: 0 auto;
+        }
+    }
+}

@@ -15,7 +15,7 @@ export default function DisplayAllProducts({ products }: { products: IProduct[] 
 
 
     return (
-        <section>
+        <section className="product-display">
             <h2>Alla våra produkter</h2>
             <label>Kategorier</label>
             <select onChange={(e) => setCategory(e.target.value)}>
@@ -25,9 +25,9 @@ export default function DisplayAllProducts({ products }: { products: IProduct[] 
                 ))}
 
             </select>
-            <ul>
+            <ul className="product-display-grid">
                 {productDisplay.map((item) =>
-                    <li key={item.id}>
+                    <li key={item.id} >
                         <Link href={`/product/${item.slug}`}>
 
                             <h5>{item.title}</h5>

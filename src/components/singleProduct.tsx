@@ -4,12 +4,13 @@ export default function DisplaySingleProduct({ product }: { product: IProduct })
 
     // const product: IProduct = await getProductBySlug();
     return (
-        <section>
+        <section className="product">
             <h3>{product.title}</h3>
-            <span>{product.description}</span>
+            <p>{product.description}</p>
             <span>{product.price}</span>
 
             <figure>
+
                 {product.images.map((img, index) => (
                     <img key={index} src={img} />
                 ))}
