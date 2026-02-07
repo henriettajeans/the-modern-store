@@ -7,12 +7,12 @@ export default function DisplaySingleProduct({ product }: { product: IProduct })
         <section>
             <h3>{product.title}</h3>
             <span>{product.description}</span>
+            <span>{product.price}</span>
 
             <figure>
-                {/* TODO: change to map */}
-                <img src={product.images[0]} />
-                <img src={product.images[1]} />
-                <img src={product.images[2]} />
+                {product.images.map((img, index) => (
+                    <img key={index} src={img} />
+                ))}
             </figure>
         </section>
     )

@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { IProduct } from "../models/IProducts";
+import p_img from "../../public/placeholder.png";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -29,7 +31,8 @@ export default function DisplayAllProducts({ products }: { products: IProduct[] 
                         <Link href={`/product/${item.slug}`}>
 
                             <h5>{item.title}</h5>
-                            <img src={item.images[0]} alt={item.description} height={200} width={200} />
+                            <span>${item.price}</span>
+                            <img src={item.images[0] ?? p_img} height={200} width={200} />
 
                         </Link>
                     </li>
