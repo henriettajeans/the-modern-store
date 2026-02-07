@@ -25,12 +25,15 @@ export default function DisplayAllProducts({ products }: { products: IProduct[] 
             </select>
             <ul>
                 {productDisplay.map((item) =>
-                    <Link href={`/product/${item.slug}`} key={item.id}>
-                        <li>
+                    <li key={item.id}>
+                        <Link href={`/product/${item.slug}`}>
+
                             <h5>{item.title}</h5>
                             <img src={item.images[0]} alt={item.description} height={200} width={200} />
-                        </li>
-                    </Link>)}
+
+                        </Link>
+                    </li>
+                )}
             </ul>
         </section>
     )

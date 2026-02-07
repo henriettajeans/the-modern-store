@@ -1,4 +1,4 @@
-import getAllProducts from "@/services/getAllProducts";
+import DisplaySingleProduct from "@/components/singleProduct";
 import getSingleProduct from "@/services/getSingleProduct";
 import { notFound } from "next/navigation";
 
@@ -16,8 +16,9 @@ export default async function SingleProduct({
 
     return (
         <section>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
+
+            <DisplaySingleProduct product={product} />
+
         </section>
     )
 }
