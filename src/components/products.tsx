@@ -5,6 +5,7 @@ import p_img from "../../public/placeholder.png";
 
 import Image from "next/image";
 import { useState } from "react";
+import ProductCard from "./productCard";
 
 export default function DisplayAllProducts({ products }: { products: IProduct[] }) {
     const [category, setCategory] = useState<string>("");
@@ -26,16 +27,10 @@ export default function DisplayAllProducts({ products }: { products: IProduct[] 
 
             </select>
             <ul className="product-display-grid">
+
+                {/* Products in grid display are from a component using props, which is mapping the product array */}
                 {productDisplay.map((item) =>
-                    <li key={item.id} >
-                        <Link href={`/product/${item.slug}`}>
-
-                            <h5>{item.title}</h5>
-                            <span>${item.price}</span>
-                            <img src={item.images[0] ?? p_img} height={200} width={200} />
-
-                        </Link>
-                    </li>
+                    <ProductCard key={item.title} item={item} />
                 )}
             </ul>
         </section>

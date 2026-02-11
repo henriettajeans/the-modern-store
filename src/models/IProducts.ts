@@ -20,3 +20,7 @@ export interface Category {
     creationAt: string
     updatedAt: string
 }
+
+export interface ProductCardProps {
+    item: IProduct
+}
