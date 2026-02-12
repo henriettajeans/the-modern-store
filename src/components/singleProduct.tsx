@@ -16,7 +16,7 @@ export default function DisplaySingleProduct({ product }: { product: IProduct })
                     <img key={index} src={img} />
                 ))}
             </figure>
-            <LikeButton productTitle={product.slug} />
+            <LikeButton productTitle={product.slug} initialLikes={0} />
         </section>
     )
 

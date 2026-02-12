@@ -1,6 +1,6 @@
 import { IProduct } from "../models/IProducts";
 
-const productsURL = "https://api.escuelajs.co/api/v1/products";
+const productsURL = "https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
 
 export default async function getAllProducts(): Promise<IProduct[]> {
     const res = await fetch(productsURL, { cache: "no-store" });

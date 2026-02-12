@@ -5,6 +5,10 @@ import LikeButton from "./likeButton"
 
 
 export default function ProductCard({ item }: ProductCardProps) {
+
+
+
+
     return (
         <li key={item.id} >
             <Link href={`/product/${item.slug}`}>
@@ -14,7 +18,7 @@ export default function ProductCard({ item }: ProductCardProps) {
                 <img src={item.images[0]} height={200} width={200} />
 
             </Link>
-            <LikeButton productTitle={item.slug} />
+            <LikeButton productTitle={item.slug} initialLikes={0} />
         </li>
     )
 }
