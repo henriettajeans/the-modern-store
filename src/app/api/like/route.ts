@@ -25,9 +25,11 @@ export async function POST(request: Request) {
 
 }
 
+// GET: /api/like?productTitle= 
+
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
-    const productTitle = searchParams.get("product");
+    const productTitle = searchParams.get("productTitle");
 
     if (!productTitle) {
         return NextResponse.json(

@@ -1,5 +1,6 @@
-import { IProduct, ProductCardProps } from "@/models/IProducts"
+import { ProductCardProps } from "@/models/IProducts"
 import Link from "next/link"
+import LikeButton from "./likeButton"
 
 
 
@@ -13,6 +14,7 @@ export default function ProductCard({ item }: ProductCardProps) {
                 <img src={item.images[0]} height={200} width={200} />
 
             </Link>
+            <LikeButton productTitle={item.slug} />
         </li>
     )
 }

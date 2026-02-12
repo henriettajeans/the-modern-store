@@ -1,4 +1,5 @@
 import { IProduct } from "@/models/IProducts";
+import LikeButton from "./likeButton";
 
 export default function DisplaySingleProduct({ product }: { product: IProduct }) {
 
@@ -15,6 +16,7 @@ export default function DisplaySingleProduct({ product }: { product: IProduct })
                     <img key={index} src={img} />
                 ))}
             </figure>
+            <LikeButton productTitle={product.slug} />
         </section>
     )
 
