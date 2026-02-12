@@ -24,11 +24,15 @@ export default function LikeButton({ productTitle, initialLikes }: LikeButtonPro
             setLikes(data.likes);
         };
         fetchLikes();
+
+        // Add to local storage, so a like is set to "user" and works across different pages and components
+        const likedProducts = JSON.parse(localStorage.getItem("likedProducts") || "[]");
+        setHasLiked(likedProducts.includes(productTitle));
+
     }, [productTitle]);
 
     const toggleLikeButton = async () => {
         const newHasLiked = !hasLiked;
-        setHasLiked(newHasLiked);
 
         const res = await fetch("/api/like", {
             method: "POST",
@@ -40,6 +44,21 @@ export default function LikeButton({ productTitle, initialLikes }: LikeButtonPro
         })
         const data = await res.json();
         setLikes(data.likes);
+        setHasLiked(newHasLiked);
+
+        // Set user action Like to local storage
+        const likedProducts = JSON.parse(localStorage.getItem("likedProducts") || "[]");
+
+        if (newHasLiked) {
+            // User just liked it - ADD to array
+            likedProducts.push(productTitle);
+        } else {
+            // User just unliked it - REMOVE from array
+            const index = likedProducts.indexOf(productTitle);
+            if (index > -1) likedProducts.splice(index, 1);
+        }
+
+        localStorage.setItem("likedProducts", JSON.stringify(likedProducts));
     }
 
     return (
