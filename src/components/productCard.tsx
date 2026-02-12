@@ -1,13 +1,11 @@
 import { ProductCardProps } from "@/models/IProducts"
 import Link from "next/link"
 import LikeButton from "./likeButton"
+import WishListButton from "./wishListButton"
 
 
 
 export default function ProductCard({ item }: ProductCardProps) {
-
-
-
 
     return (
         <li key={item.id} >
@@ -19,6 +17,7 @@ export default function ProductCard({ item }: ProductCardProps) {
 
             </Link>
             <LikeButton productTitle={item.slug} initialLikes={0} />
+            <WishListButton product={item} />
         </li>
     )
 }

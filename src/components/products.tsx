@@ -2,7 +2,6 @@
 import { IProduct } from "../models/IProducts";
 import ProductFilter from "./filterProduct";
 
-import ProductCard from "./productCard";
 
 export default function DisplayAllProducts({ products }: { products: IProduct[] }) {
 

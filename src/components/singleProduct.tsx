@@ -1,5 +1,6 @@
 import { IProduct } from "@/models/IProducts";
 import LikeButton from "./likeButton";
+import WishListButton from "./wishListButton";
 
 export default function DisplaySingleProduct({ product }: { product: IProduct }) {
 
@@ -17,6 +18,7 @@ export default function DisplaySingleProduct({ product }: { product: IProduct })
                 ))}
             </figure>
             <LikeButton productTitle={product.slug} initialLikes={0} />
+            
         </section>
     )
 
