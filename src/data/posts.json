@@ -1,23 +1,16 @@
 [
   {
-    "id": "1",
-    "title": "Min nya blogg!",
-    "content": "lorem ipsum dolor sit amet.",
-    "likes": 17,
-    "slug": "min-nya-blogg"
-  },
-  {
     "id": "2",
     "title": "Första inlägget",
     "content": "Jag har startat min nya blogg för att öva på CRUD.",
-    "likes": 5,
+    "likes": 3,
     "slug": "forsta-inlagget"
   },
   {
     "id": "3",
     "title": "Min resa med Lexicon",
     "content": "lorem ipsum dolor sit amet.",
-    "likes": 10,
+    "likes": 13,
     "slug": "min-nya-blogg"
   },
   {
@@ -26,5 +19,12 @@
     "content": "Hur ska jag börja. I förra veckan så var jag på Techjobbmässan 2026, och dagen efter det hade vi APL-dag på plats i Lexicons byggnad. Det var en händelserik vecka som inte bestod av mycket kodande, däremot nätverkande och LinkedIn.",
     "likes": 0,
     "slug": "hur-det-gar-pa-utbildningen"
+  },
+  {
+    "id": "bf853171-b754-46ff-b62b-e16c5f267c80",
+    "title": "En härlig helg",
+    "content": "Jag har haft en bra helg. I fredags kväll tog jag tag i mig själv och blev utbjuden på dejt. Det var en kvinna som jag träffat för några år sedan som det rann ut i sanden med, men som matchar mer med den jag är idag. Jag har dejtat sporadiskt sedan dess och inte ens blivit kär, knappt haft en crush. Hon däremot, har hunnit vara tillsammans med två andra damer under tiden. Många hintar under kvällen om att hon var glad att jag nu var singel så att vi kunde ses igen. Idag, söndag, var jag barnvakt åt mina nära väninnas systerdöttrar. Min vän Sahra hade bokat en intensiv tvättid, två stugor under samma timmar, och barnen är för intensiva och tycker dessutom att det är urtråkigt i tvättstugorna, och det kan man ju förstå. Deras mamma, Sahras syster, födde deras lillasyster igår kväll och kommer bli kvar på bb i alla fall över natten. Det verkar väldigt kort och i minsta laget, när jag föddes stannade man 3 dygn, minst. Vi dansade till kpop, spelade på pappan, drack te och läste ur Astrid Lindgrens sagor. När jag skulle gå var det ett långt adjö, jag saknar de redan.",
+    "likes": 6,
+    "slug": "en-harlig-helg"
   }
 ]

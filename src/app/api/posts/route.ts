@@ -2,6 +2,7 @@ import { IPost } from "@/models/IPost";
 import { getPosts, writePosts } from "@/services/postService";
 import { NextRequest, NextResponse } from "next/server";
 import slugify from "slugify";
+import { v4 as uuidv4 } from 'uuid';
 
 export async function GET() {
     try {
@@ -45,6 +46,3 @@ export async function POST(request: NextRequest) {
     }
 }
 
-function uuidv4(): string {
-    throw new Error("Function not implemented.");
-}
