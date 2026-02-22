@@ -3,10 +3,10 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
-        const { id } = params;
+        const { id } = await params;
         const posts = getPosts();
         const post = posts.find((p) => p.id === id);
 
@@ -29,9 +29,9 @@ export async function GET(
 }
 
 // Add a like/dislike to post
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const { id } = params;
+        const { id } = await params;
         const body = await request.json();
         const posts = getPosts();
         const singlePosts = posts.findIndex((p) => p.id === id);
@@ -65,9 +65,9 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 }
 
 // Delete a single post 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const { id } = params;
+        const { id } = await params;
         const posts = getPosts();
 
         // Update the list without the deleted post
